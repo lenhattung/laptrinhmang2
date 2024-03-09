@@ -108,6 +108,19 @@ public class XuLyFile {
         hienThiCayThuMucChiTiet(path, 0);
     }
 
+    public static void kiemTraThongTin(String path){
+        File file = new File(path);
+        if(!file.exists()){
+            System.out.println("File không tồn tại");
+            return; // Dừng lương hàm
+        }
+        System.out.println("THÔNG TIN CHI TIẾT: ");
+        System.out.println("Tên file: " + file.getName());
+        System.out.println("Loại: " + (file.isFile()?"Tập tin":"Thư mục"));
+        // System.out.println("Lưu trữ: " + file.getTotalSpace());
+        System.out.println("File ẩn: " + file.isHidden());
+    }
+
     public static void main(String[] args) {
         // String path = "D:\\temp";
         // XuLyFile.taoThuMuc(path);
@@ -133,6 +146,8 @@ public class XuLyFile {
         // String path = "D:\\temp - Copy";
         // XuLyFile.xoaTatCa(path);
 
-        XuLyFile.hienThiCayThucMuc("D:\\temp");
+        // XuLyFile.hienThiCayThucMuc("D:\\temp");
+
+        XuLyFile.kiemTraThongTin("D:\\temp");
     }
 }
