@@ -67,8 +67,8 @@ public class XuLyFile {
 
             // (ax - bx) = 0 <=> x(a-b) = 0
 
-            // Xõa chính bản thân nó
-            if(file.delete()){ // thực hiện hành động xóa và file thành công
+            // Xóa chính bản thân nó
+            if(file.delete()){ // thực hiện hành động xóa và kiểm tra thành công
                 System.out.println("Đã xóa file: " + path);
             }else{
                 System.out.println("Không thể xóa file: " + path);
