@@ -78,6 +78,36 @@ public class XuLyFile {
         }
     }
 
+    public static void hienThiCayThuMucChiTiet(String path, int level){
+        File file = new File(path);
+
+        for (int i=0; i<level; i++){
+            System.out.print("\t");
+        }
+        if(file.isFile()) { // Kiểm tra file là tập tin
+            System.out.println("|__" +file.getName()); // Lấy ra tên file
+        }else{
+            System.out.println("|__" +file.getName()); // Lấy ra tên file
+
+            // Tiếp tục đệ quy để hiện thị các mục con bên trong
+            File[] files = file.listFiles();
+            for(File f: files){
+                hienThiCayThuMucChiTiet(f.getAbsolutePath(), level+1);
+            }
+        }
+    }
+
+    public static void hienThiCayThucMuc(String path){
+        File file = new File(path);
+        if(!file.exists()){
+            System.out.println("File không tồn tại");
+            return; // Dừng lương hàm
+        }
+
+
+        hienThiCayThuMucChiTiet(path, 0);
+    }
+
     public static void main(String[] args) {
         // String path = "D:\\temp";
         // XuLyFile.taoThuMuc(path);
@@ -100,7 +130,9 @@ public class XuLyFile {
         // String path = "D:\\temp - Copy\\dir1\\dir2\\dir3";
         // XuLyFile.xoa(path);
 
-        String path = "D:\\temp - Copy";
-        XuLyFile.xoaTatCa(path);
+        // String path = "D:\\temp - Copy";
+        // XuLyFile.xoaTatCa(path);
+
+        XuLyFile.hienThiCayThucMuc("D:\\temp");
     }
 }
