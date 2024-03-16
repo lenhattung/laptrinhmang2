@@ -1,0 +1,4 @@
+Khi đọc/ghi, dữ liệu được di chuyển thành dòng gọi là luồng.
+Luồng chuyển dữ liệu từ nguồn tới đích: Tập tin, thiết bị, socket, và mảng.
+Dữ liệu trong luồng có 2 dạng: byte và ký tự.
+Dữ liệu gởi vào luồng có nhiều kiểu khác nhau tương ứng với các kiểu ngôn ngữ Java hỗ trợ.

@@ -1,0 +1,2 @@
+Xin chào các bạn!
+Đây là code ví dụ ghi file txt.
