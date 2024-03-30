@@ -17,8 +17,11 @@ public class MyNSLookup {
             try {
                 InetAddress ia = InetAddress.getByName(input);
                 // in thông tin
-                System.out.println("IP: "+ia.getHostAddress());
-                System.out.println("Domain: "+ia.getHostName());
+                System.out.println("IP: " +ia.getHostAddress());
+                System.out.println("Domain: " +ia.getHostName());
+                System.out.println("Reachable: " + ia.isReachable(120));
+                System.out.println("MulticastAddress: " + ia.isMulticastAddress());
+                System.out.println("SiteLocalAddress: " + ia.isMulticastAddress());
             }catch (Exception e){
                 //e.printStackTrace();
                 System.out.println("Gặp lỗi, vui lòng nhập địa chỉ khác!");
