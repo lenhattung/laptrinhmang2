@@ -1,10 +1,10 @@
-package bai01;
+package bai_02;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class XinChao extends JFrame {
-    public XinChao(){
+public class XinChao_LookAndFeel extends JFrame {
+    public XinChao_LookAndFeel(){
         // Xây dựng một số nội dung trong chương trình
         this.init();
 
@@ -41,6 +41,13 @@ public class XinChao extends JFrame {
         this.add(mainPanel);
     }
     public static void main(String[] args) {
-        new XinChao();
+        // Quy định về cách nhìn và cảm nhận
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        new XinChao_LookAndFeel();
     }
 }
