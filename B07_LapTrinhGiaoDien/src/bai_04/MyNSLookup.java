@@ -27,7 +27,6 @@ public class MyNSLookup extends JFrame {
         // Quy định về bố cục
         mainPanel.setLayout(new FlowLayout());
 
-
         JPanel headerPanel = new JPanel();
         // Quy định về bố cục
         headerPanel.setLayout(new GridLayout(3,1));
