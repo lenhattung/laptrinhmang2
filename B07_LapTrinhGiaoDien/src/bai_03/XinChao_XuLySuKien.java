@@ -9,7 +9,6 @@ public class XinChao_XuLySuKien extends JFrame {
     public XinChao_XuLySuKien(){
         // Xây dựng một số nội dung trong chương trình
         this.init();
-
         // Gán tên trên thanh tiêu đề
         this.setTitle("Xin chào");
         // Quy định về kích thước
@@ -100,7 +99,6 @@ public class XinChao_XuLySuKien extends JFrame {
         }catch (Exception e){
             e.printStackTrace();
         }
-
         new XinChao_XuLySuKien();
     }
 }
